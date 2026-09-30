@@ -6,7 +6,7 @@
 <title>Portfólio de Cinesiologia e Biomecânica</title>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#F2F6F7;--surface:#FFFFFF;--ink:#13242B;--muted:#4F636C;--line:#CFDBE0;--teal:#0E6B78;--mark:#E39A0B;--soft:#E2EEF0;
+:root{--bg:#DDE7E8;--surface:#FFFFFF;--ink:#13242B;--muted:#4F636C;--line:#BCCDD1;--teal:#0E6B78;--mark:#E39A0B;--soft:#CEDFE1;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1A1F;--surface:#172429;--ink:#E6EFF1;--muted:#9BB0B8;--line:#2A3D44;--teal:#5CC3D0;--mark:#F0B133;--soft:#1D3037}}
 :root[data-theme="dark"]{--bg:#0F1A1F;--surface:#172429;--ink:#E6EFF1;--muted:#9BB0B8;--line:#2A3D44;--teal:#5CC3D0;--mark:#F0B133;--soft:#1D3037}
@@ -18,7 +18,9 @@ h1,h2,h3{font-family:"Bricolage Grotesque","Source Sans 3",system-ui,sans-serif;
 header{padding:48px 0 28px;border-bottom:1px solid var(--line)}
 h1{font-size:clamp(2rem,6vw,3.2rem);font-weight:700;letter-spacing:-.02em}
 .sub{color:var(--muted);margin:10px 0 0;max-width:60ch}
-.dial{float:right;width:110px;height:auto;margin:0 0 8px 16px}
+.hero-art{float:right;width:150px;height:auto;margin:0 0 8px 16px;opacity:.92}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero-art{filter:invert(1) brightness(1.15)}}
+:root[data-theme="dark"] .hero-art{filter:invert(1) brightness(1.15)}
 nav{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
 nav .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:8px;padding-bottom:8px}
 nav a{white-space:nowrap;color:var(--ink);text-decoration:none;padding:6px 12px;border-radius:999px;font-weight:600;font-size:.95rem}
@@ -52,27 +54,28 @@ figure{margin:0}figure img,figure video{width:100%;height:auto;display:block;bor
 .slot b{color:var(--ink)}
 .slot small{display:block;margin-top:6px}
 ul.tight{padding-left:20px;margin:8px 0}
+.pdf-pages{display:flex;flex-direction:column;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px}
+.pdf-pages img{width:100%;height:auto;display:block;border-radius:3px}
+.ex-icons{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0 20px}
+@media(max-width:640px){.ex-icons{grid-template-columns:repeat(2,1fr)}}
+.ex-icons figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 6px 12px;text-align:center}
+.ex-icons svg{width:64px;height:56px;display:block;margin:0 auto}
+.ex-icons figcaption{margin-top:6px;font-size:.78rem;color:var(--muted);line-height:1.25}
+details>div p a{color:var(--teal);font-weight:600}
 footer{padding:36px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line);margin-top:40px}
 body::before{content:"";position:fixed;inset:14px;border:1px solid var(--line);pointer-events:none;z-index:1}
-.rail{position:fixed;top:0;bottom:0;width:46px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:28px;pointer-events:none;z-index:1}
-.rail-left{left:0}
-.rail-right{right:0}
-.rail span{writing-mode:vertical-rl;transform:rotate(180deg);font:600 .72rem "Bricolage Grotesque",sans-serif;letter-spacing:.12em;color:var(--muted);white-space:nowrap}
-.rail-left span{transform:none}
-@media (max-width:1180px){.rail{display:none}body::before{inset:8px}}
+@media (max-width:1180px){body::before{inset:8px}}
 </style>
 </head>
 <body>
-<div class="rail rail-left" aria-hidden="true"><span>PORTFÓLIO — CINESIOLOGIA E BIOMECÂNICA</span></div>
-<div class="rail rail-right" aria-hidden="true"><span>UNIDAVI · TERAPIA OCUPACIONAL · 2ª FASE</span></div>
 <header><div class="wrap">
-<svg class="dial" viewBox="0 0 120 70" aria-hidden="true"><g fill="none" stroke="var(--teal)" stroke-width="2"><path d="M10 62A50 50 0 0 1 110 62"/><path d="M60 62L100 30" stroke="var(--mark)" stroke-width="3"/><path d="M10 62H110"/></g><g stroke="var(--teal)" stroke-width="1.5"><path d="M10 62v-7M35 22l5 5M60 12v7M85 22l-5 5M110 62v-7"/></g><circle cx="60" cy="62" r="4" fill="var(--teal)"/></svg>
+<img class="hero-art" src="arte1.png" alt="Ilustração de um goniômetro antigo" />
 <h1>Portfólio de Cinesiologia e Biomecânica</h1>
 <p class="sub">Terapia Ocupacional, 2ª fase, UNIDAVI. Registro das aulas práticas, com o que foi estudado, o que foi feito e as filmagens. Professor Rafael.</p>
 </div></header>
 
 <nav aria-label="Aulas"><div class="wrap">
-<a href="#aula1">Aula 1</a><a href="#aula2">Aula 2</a><a href="#aula3">Aula 3</a><a href="#aula4">Aula 4</a>
+<a href="#aula1">Aula 1</a><a href="#aula2">Aula 2</a><a href="#aula3">Aula 3</a><a href="#aula4">Aula 4</a><a href="#aula5">Aula 5</a><a href="#aula6">Aula 6</a><a href="#conclusao">Conclusão</a>
 </div></nav>
 
 <main class="wrap">
@@ -151,9 +154,9 @@ body::before{content:"";position:fixed;inset:14px;border:1px solid var(--line);p
 <h3>Filmagens e fotos</h3>
 <p>Registro da atividade em sala. Os quadros abaixo foram tirados do vídeo.</p>
 <div class="media">
-<figure class="vid"><video controls playsinline preload="metadata" src="m1.mp4"></video><figcaption>Vídeo da atividade: avaliações goniométricas feitas pelo grupo em aula.</figcaption></figure>
+<figure class="vid"><video controls playsinline preload="metadata" src="video1.mp4"></video><figcaption>Vídeo da atividade: avaliações goniométricas feitas pelo grupo em aula.</figcaption></figure>
 </div>
-<div class="media"><figure><img src="m2.jpg" alt="Medição do punho: goniômetro posicionado sobre o antebraço e preenchimento do roteiro na mesa."><figcaption>Medição do punho: goniômetro posicionado sobre o antebraço e preenchimento do roteiro na mesa.</figcaption></figure><figure><img src="m3.jpg" alt="Avaliação da coluna: avaliador posicionando a colega para a medição."><figcaption>Avaliação da coluna: avaliador posicionando a colega para a medição.</figcaption></figure><figure><img src="m4.jpg" alt="Avaliação da coluna cervical: alinhamento do goniômetro na cabeça e no pescoço."><figcaption>Avaliação da coluna cervical: alinhamento do goniômetro na cabeça e no pescoço.</figcaption></figure><figure><img src="m5.jpg" alt="Ajuste do goniômetro durante a medição do movimento da cabeça."><figcaption>Ajuste do goniômetro durante a medição do movimento da cabeça.</figcaption></figure></div>
+<div class="media"><figure><img src="foto1.jpg" alt="Medição do punho: goniômetro posicionado sobre o antebraço e preenchimento do roteiro na mesa."><figcaption>Medição do punho: goniômetro posicionado sobre o antebraço e preenchimento do roteiro na mesa.</figcaption></figure><figure><img src="foto2.jpg" alt="Avaliação da coluna: avaliador posicionando a colega para a medição."><figcaption>Avaliação da coluna: avaliador posicionando a colega para a medição.</figcaption></figure><figure><img src="foto3.jpg" alt="Avaliação da coluna cervical: alinhamento do goniômetro na cabeça e no pescoço."><figcaption>Avaliação da coluna cervical: alinhamento do goniômetro na cabeça e no pescoço.</figcaption></figure><figure><img src="foto4.jpg" alt="Ajuste do goniômetro durante a medição do movimento da cabeça."><figcaption>Ajuste do goniômetro durante a medição do movimento da cabeça.</figcaption></figure></div>
 <h3>Reflexão</h3>
 <p>Espaço para o que você aprendeu: como a posição do paciente e o alinhamento do goniômetro mudam a medida, quais compensações foram mais difíceis de evitar e como isso se relaciona com a prática da Terapia Ocupacional.</p>
 </section>
@@ -222,9 +225,9 @@ body::before{content:"";position:fixed;inset:14px;border:1px solid var(--line);p
 <h3>Filmagens e fotos</h3>
 <p>Registro da atividade em sala. Os quadros abaixo foram tirados do vídeo.</p>
 <div class="media">
-<figure class="vid"><video controls playsinline preload="metadata" src="m6.mp4"></video><figcaption>Vídeo da atividade: avaliações goniométricas de ombro e cotovelo feitas pelo grupo em aula.</figcaption></figure>
+<figure class="vid"><video controls playsinline preload="metadata" src="video2.mp4"></video><figcaption>Vídeo da atividade: avaliações goniométricas de ombro e cotovelo feitas pelo grupo em aula.</figcaption></figure>
 </div>
-<div class="media"><figure><img src="m7.jpg" alt="Medição da flexão do cotovelo na mesa, com o goniômetro alinhado ao rádio."><figcaption>Medição da flexão do cotovelo na mesa, com o goniômetro alinhado ao rádio.</figcaption></figure><figure><img src="m8.jpg" alt="Registro da amplitude no roteiro, logo após a medição do cotovelo."><figcaption>Registro da amplitude no roteiro, logo após a medição do cotovelo.</figcaption></figure><figure><img src="m9.jpg" alt="Avaliação da rotação do ombro, com o cotovelo fletido a 90°."><figcaption>Avaliação da rotação do ombro, com o cotovelo fletido a 90°.</figcaption></figure><figure><img src="m10.jpg" alt="Ajuste da manga do jaleco antes da medição de abdução do ombro."><figcaption>Ajuste da manga do jaleco antes da medição de abdução do ombro.</figcaption></figure></div>
+<div class="media"><figure><img src="foto5.jpg" alt="Medição da flexão do cotovelo na mesa, com o goniômetro alinhado ao rádio."><figcaption>Medição da flexão do cotovelo na mesa, com o goniômetro alinhado ao rádio.</figcaption></figure><figure><img src="foto6.jpg" alt="Registro da amplitude no roteiro, logo após a medição do cotovelo."><figcaption>Registro da amplitude no roteiro, logo após a medição do cotovelo.</figcaption></figure><figure><img src="foto7.jpg" alt="Avaliação da rotação do ombro, com o cotovelo fletido a 90°."><figcaption>Avaliação da rotação do ombro, com o cotovelo fletido a 90°.</figcaption></figure><figure><img src="foto8.jpg" alt="Ajuste da manga do jaleco antes da medição de abdução do ombro."><figcaption>Ajuste da manga do jaleco antes da medição de abdução do ombro.</figcaption></figure></div>
 
 <h3>Reflexão</h3>
 <p>Espaço para o que você aprendeu: como o ombro tende a compensar com o tronco e a escápula durante a medição, a diferença entre medir uma articulação com dois eixos de movimento (o cotovelo) e uma com múltiplos graus de liberdade (o ombro), e como isso se relaciona com a prática da Terapia Ocupacional.</p>
@@ -287,9 +290,9 @@ body::before{content:"";position:fixed;inset:14px;border:1px solid var(--line);p
 <h3>Filmagens e fotos</h3>
 <p>Registro da atividade em sala. Os quadros abaixo foram tirados do vídeo, que já traz legendas com o músculo e a posição do goniômetro em cada movimento do quadril.</p>
 <div class="media">
-<figure class="vid"><video controls playsinline preload="metadata" src="m11.mp4"></video><figcaption>Vídeo da atividade: avaliação goniométrica de quadril, joelho e tornozelo feita pelo grupo em aula.</figcaption></figure>
+<figure class="vid"><video controls playsinline preload="metadata" src="video3.mp4"></video><figcaption>Vídeo da atividade: avaliação goniométrica de quadril, joelho e tornozelo feita pelo grupo em aula.</figcaption></figure>
 </div>
-<div class="media"><figure><img src="m12.jpg" alt="Flexão de quadril, com o goniômetro registrando 180° no início do movimento."><figcaption>Flexão de quadril, com o goniômetro registrando 180° no início do movimento.</figcaption></figure><figure><img src="m13.jpg" alt="Extensão de quadril, avaliada com a paciente em decúbito lateral."><figcaption>Extensão de quadril, avaliada com a paciente em decúbito lateral.</figcaption></figure><figure><img src="m14.jpg" alt="Adução de quadril, goniômetro posicionado a 90°."><figcaption>Adução de quadril, goniômetro posicionado a 90°.</figcaption></figure><figure><img src="m15.jpg" alt="Rotação externa de quadril, com o joelho fletido a 90°."><figcaption>Rotação externa de quadril, com o joelho fletido a 90°.</figcaption></figure></div>
+<div class="media"><figure><img src="foto9.jpg" alt="Flexão de quadril, com o goniômetro registrando 180° no início do movimento."><figcaption>Flexão de quadril, com o goniômetro registrando 180° no início do movimento.</figcaption></figure><figure><img src="foto10.jpg" alt="Extensão de quadril, avaliada com a paciente em decúbito lateral."><figcaption>Extensão de quadril, avaliada com a paciente em decúbito lateral.</figcaption></figure><figure><img src="foto11.jpg" alt="Adução de quadril, goniômetro posicionado a 90°."><figcaption>Adução de quadril, goniômetro posicionado a 90°.</figcaption></figure><figure><img src="foto12.jpg" alt="Rotação externa de quadril, com o joelho fletido a 90°."><figcaption>Rotação externa de quadril, com o joelho fletido a 90°.</figcaption></figure></div>
 
 <h3>Reflexão</h3>
 <p>Espaço para o que você aprendeu: como a posição do paciente (deitado, joelho fletido) muda a medida do quadril, por que a extensão de joelho costuma ser 0° em pessoas sem hiperextensão, e como a mobilidade dessas três articulações se combina na marcha.</p>
@@ -345,14 +348,142 @@ body::before{content:"";position:fixed;inset:14px;border:1px solid var(--line);p
 </table></div>
 
 <h3>Filmagens e fotos</h3>
-<p>Essa atividade ainda não tem vídeo ou foto anexados. Quando você mandar as filmagens da academia, eu incluo aqui do mesmo jeito que fiz nos outros dias.</p>
+<p>Cada integrante do grupo filmou um exercício de um grupo muscular diferente, na academia da Unidavi.</p>
 <div class="media">
-<div class="slot"><b>Vídeo</b><small>Filmagem de um dos exercícios (peitoral, costas, braços, ombro ou quadril).</small></div>
-<div class="slot"><b>Foto</b><small>Registro da atividade na academia.</small></div>
+<figure class="vid"><video controls playsinline preload="metadata" src="video4.mp4"></video><figcaption><b>Peitoral — Voador.</b> Voador (peitoral), feito no cross funcional, isolando o peitoral maior.</figcaption></figure>
+<figure class="vid"><video controls playsinline preload="metadata" src="video5.mp4"></video><figcaption><b>Costas — Puxada alta.</b> Puxada alta, ativando principalmente o latíssimo do dorso.</figcaption></figure>
+<figure class="vid"><video controls playsinline preload="metadata" src="video6.mp4"></video><figcaption><b>Braços — Tríceps polia.</b> Tríceps na polia, com o tríceps braquial como agonista.</figcaption></figure>
+<figure class="vid"><video controls playsinline preload="metadata" src="video7.mp4"></video><figcaption><b>Ombro — Desenvolvimento c/ halteres.</b> Desenvolvimento com halteres, trabalhando o deltoide.</figcaption></figure>
+<figure class="vid"><video controls playsinline preload="metadata" src="video8.mp4"></video><figcaption><b>Quadril — Leg Press.</b> Leg press, exercício em cadeia cinética fechada para o quadríceps.</figcaption></figure>
 </div>
 
 <h3>Reflexão</h3>
 <p>Espaço para o que você aprendeu: como identificar o agonista de um exercício observando o movimento que ele produz, por que exercícios em cadeia fechada costumam ser mais seguros para quem está começando, e como esses princípios de treino se conectam com a prescrição de exercícios na Terapia Ocupacional.</p>
+</section>
+
+<div class="divider"><i></i></div>
+
+<section id="aula5">
+<span class="day">Dia 5</span>
+<h2>Cinesiologia aplicada à função — Caso 1</h2>
+<p>Quinta atividade da disciplina: situações-problema envolvendo dificuldades funcionais. Cada grupo recebeu um caso clínico diferente e precisou montar um treino de 2 exercícios usando os conhecimentos de Cinesiologia da disciplina.</p>
+
+<h3>Contexto: como funciona a atividade</h3>
+<div class="box">
+<p>Para cada exercício escolhido, o grupo deveria: identificar as articulações e os movimentos predominantes; identificar os principais músculos envolvidos; relacionar o exercício à capacidade funcional que precisa ser desenvolvida; e explicar de que maneira o exercício contribui para a atividade. <b>O importante:</b> a escolha não podia ser justificada só pela musculatura trabalhada — era preciso montar a cadeia <b>exercício → movimento/capacidade → atividade funcional</b>.</p>
+</div>
+
+<h3>Nosso caso: Carlos, 68 anos</h3>
+<p><b>Problema funcional:</b> Carlos mora com a esposa e é independente na maior parte das AVDs, mas nos últimos meses passou a ter dificuldade para levantar-se de cadeiras baixas e do vaso sanitário. Precisa se apoiar nos braços da cadeira ou nas coxas para iniciar o movimento; sem apoio, fica inseguro e faz o movimento devagar. Ao sentar, tem dificuldade para controlar a descida, "caindo" sobre a cadeira algumas vezes. Não relata dor intensa, mas sente fraqueza nos membros inferiores, principalmente após ficar sentado por um tempo.</p>
+<p><b>Objetivo do treino:</b> melhorar a força dos membros inferiores, o controle do movimento e a segurança durante as transferências sentado ↔ em pé, favorecendo mais independência nas AVDs.</p>
+
+<h3>Perguntas respondidas pelo grupo</h3>
+<details open><summary>1–2. Movimentos ao levantar e ao sentar</summary><div>
+<p><b>Levantar:</b> flexão do tronco (desloca o centro de massa para frente) → flexão de quadril e joelho → dorsiflexão do tornozelo (projeta o corpo para frente) → extensão de quadril e joelho, elevando o corpo → tornozelo estabiliza a subida.</p>
+<p><b>Sentar:</b> praticamente o inverso — flexão de quadril, flexão dos joelhos, dorsiflexão do tornozelo e flexão controlada do tronco. O ponto mais importante no caso do Carlos é o <b>controle da descida</b>: os músculos não relaxam, eles controlam a velocidade principalmente por <b>contração excêntrica</b>.</p>
+</div></details>
+<details><summary>3–4. Articulações e músculos envolvidos</summary><div>
+<ul class="tight">
+<li><b>Quadril:</b> flexão e extensão — projeta o corpo à frente e depois estende para ficar em pé.</li>
+<li><b>Joelho:</b> flexão e extensão — a extensão é fundamental para elevar o corpo.</li>
+<li><b>Tornozelo:</b> dorsiflexão — desloca o corpo à frente e ajuda no equilíbrio.</li>
+<li><b>Coluna/tronco:</b> controla a inclinação durante a transferência de peso.</li>
+<li><b>Quadríceps:</b> extensão do joelho, para sair da posição sentada.</li>
+<li><b>Glúteo máximo:</b> extensão do quadril, na fase de subida.</li>
+<li><b>Isquiotibiais:</b> auxiliam o quadril e o controle do movimento.</li>
+<li><b>Tríceps sural:</b> estabiliza o tornozelo durante a transferência.</li>
+</ul>
+</div></details>
+
+<h3>Exercícios escolhidos</h3>
+<div class="tw"><table>
+<tr><th>Exercício</th><th>Principal objetivo</th><th>Relação com sentar/levantar</th></tr>
+<tr><td class="n">Agachamento na caixa</td><td>Treinar força, controle e coordenação</td><td>Reproduz diretamente o movimento funcional</td></tr>
+<tr><td class="n">Cadeira extensora</td><td>Fortalecer quadríceps</td><td>Auxilia na extensão do joelho para levantar</td></tr>
+<tr><td class="n">Cadeira flexora</td><td>Fortalecer isquiotibiais</td><td>Contribui para controle e estabilidade do membro inferior</td></tr>
+<tr><td class="n">Elevação pélvica</td><td>Fortalecer glúteos e extensores do quadril</td><td>Auxilia na extensão do quadril durante a subida</td></tr>
+</table></div>
+<div class="media" style="margin-top:14px">
+<figure><img src="foto13.jpg" alt="Anatomia do agachamento na caixa (box squat), com quadríceps e glúteos em destaque" /><figcaption>Agachamento na caixa — musculatura envolvida (quadríceps e glúteos em destaque).</figcaption></figure>
+<figure><img src="foto14.jpg" alt="Cadeira extensora, exercício de extensão de joelho" /><figcaption>Cadeira extensora — referência ilustrada.</figcaption></figure>
+<figure><img src="foto15.jpg" alt="Cadeira flexora, exercício de flexão de joelho" /><figcaption>Cadeira flexora — referência ilustrada.</figcaption></figure>
+<figure><img src="foto16.jpg" alt="Ilustração de elevação pélvica (glute bridge) e hip thrust com barra" /><figcaption>Referência ilustrada de elevação pélvica (glute bridge, à esquerda) e hip thrust com barra (à direita), usada como apoio visual para o exercício.</figcaption></figure>
+</div>
+<p><b>Exercício principal — agachamento na caixa:</b> Carlos fica em pé em frente à caixa/banco, com os pés estáveis. No início, o instrutor oferece as mãos como auxílio para dar segurança. Ele inclina o tronco à frente, flexiona quadril e joelhos, desce de forma controlada até encostar na caixa, depois estende quadril e joelhos para voltar à posição em pé. O auxílio do instrutor é reduzido aos poucos, conforme Carlos ganha força e segurança. Foi escolhido como exercício principal por reproduzir de perto a atividade de sentar e levantar, trabalhando força, coordenação, equilíbrio e controle da descida — os outros três exercícios (cadeira extensora, cadeira flexora e elevação pélvica) fortalecem isoladamente os músculos que entram nesse movimento.</p>
+
+<h3>Se houver déficit de força</h3>
+<div class="box">
+<p>Se Carlos tiver déficit de força (principalmente em quadríceps e glúteos), pode compensar usando demais os braços para se empurrar, apoiando as mãos nas coxas, inclinando mais o tronco à frente, fazendo o movimento mais devagar, precisando de apoio externo, tendo mais dificuldade em superfícies baixas e podendo "cair" sobre a cadeira na descida. Por isso o treino não trabalha só força — também trabalha controle, equilíbrio, coordenação e segurança.</p>
+</div>
+
+<h3>Conclusão do grupo</h3>
+<p>O caso do Carlos mostra uma dificuldade funcional ligada principalmente à fraqueza dos membros inferiores e à dificuldade de controlar a transferência entre sentado e em pé, com participação integrada de quadril, joelho, tornozelo e tronco — com destaque para quadríceps, glúteo máximo e isquiotibiais. A cadeira extensora, a cadeira flexora e a elevação pélvica fortalecem esses músculos de forma isolada, enquanto o agachamento na caixa integra força e controle num movimento parecido com o que o Carlos precisa fazer no dia a dia: fortalecimento muscular → integração dos movimentos → treino da função.</p>
+
+<h3>Roteiro original</h3>
+<details><summary>Ver o roteiro completo (Caso 1)</summary><div>
+<div class="pdf-pages">
+<img src="foto17.jpg" alt="Roteiro Caso 1, pagina 1">
+<img src="foto18.jpg" alt="Roteiro Caso 1, pagina 2">
+<img src="foto19.jpg" alt="Roteiro Caso 1, pagina 3">
+<img src="foto20.jpg" alt="Roteiro Caso 1, pagina 4">
+<img src="foto21.jpg" alt="Roteiro Caso 1, pagina 5">
+<img src="foto22.jpg" alt="Roteiro Caso 1, pagina 6">
+<img src="foto23.jpg" alt="Roteiro Caso 1, pagina 7">
+</div>
+</div></details>
+
+<h3>Reflexão</h3>
+<p>Espaço para o que você aprendeu: por que a escolha de um exercício não pode se basear só no músculo trabalhado, como a contração excêntrica aparece em atividades do dia a dia (como controlar a descida ao sentar), e como essa lógica de "fortalecimento → integração → função" se aplica ao raciocínio clínico da Terapia Ocupacional.</p>
+</section>
+<div class="divider"><i></i></div>
+<section id="aula6">
+<span class="day">Dia 6</span>
+<h2>Treinamento de força — Teste de 1RM</h2>
+<p>Sexta atividade da disciplina: treinamento de força e avaliação da força muscular através do teste de 1 repetição máxima (1RM) e da dinamometria.</p>
+
+<h3>Contexto: o que é o teste de 1RM</h3>
+<div class="box">
+<p><b>Definição:</b> 1RM é o peso mais pesado que a pessoa consegue levantar apenas uma vez, numa execução completa e correta do movimento.</p>
+<p><b>Forma clássica:</b> depois do aquecimento e da familiarização com o equipamento, o avaliado estipula uma carga máxima para o exercício e tem até 5 tentativas, respeitando 3 minutos de descanso entre elas, até atingir o 1RM real.</p>
+<p><b>Forma adaptada (a que usamos em aula):</b> o avaliador escolhe uma carga e pede 12 repetições em ritmo constante, sem interrupção. Se o avaliado consegue completar as 12, descansa 5 minutos, aumenta o peso e testa de novo — até 3 vezes, até o limite de repetições que a pessoa consegue realizar. A partir da quantidade de repetições executadas, estima-se o 1RM usando uma tabela de referência (regra de 3): 1RM = 100% da carga, 2RM ≈ 95%, 4RM ≈ 90%, 6RM ≈ 85%, 8RM ≈ 80%, 10RM ≈ 75%, 12RM ≈ 70%.</p>
+</div>
+
+<h3>Atividade 1 — Teste de 1RM (forma adaptada)</h3>
+<p>Cada grupo escolheu um exercício para membros superiores e um para membros inferiores e aplicou o teste adaptado num colega do grupo.</p>
+<div class="tw"><table>
+<tr><th>Membro</th><th>Exercício</th><th>Avaliado(a)</th><th>1RM estimado</th></tr>
+<tr><td class="n">Membros superiores</td><td>Supino reto</td><td>Jennyfer</td><td>24 kg</td></tr>
+<tr><td class="n">Membros inferiores</td><td>Cadeira extensora</td><td>Jennyfer</td><td>66,66 kg</td></tr>
+</table></div>
+
+<h3>Atividade 2 — Avaliação com dinamômetros</h3>
+<p>Também foi feita a avaliação da força de preensão manual (dinamômetro manual) e da força de tronco (dinamômetro de tronco), cada uma com um(a) colega diferente.</p>
+<div class="tw"><table>
+<tr><th>Instrumento</th><th>Avaliado(a)</th><th>Valor</th></tr>
+<tr><td class="n">Dinamômetro manual</td><td>Jennyfer</td><td>50</td></tr>
+<tr><td class="n">Dinamômetro de tronco</td><td>Sirlene</td><td>70</td></tr>
+</table></div>
+<p><b>Aplicabilidade e importância da avaliação com o dinamômetro:</b> a avaliação com o dinamômetro é importante para mensurar a força muscular de forma objetiva, permitindo identificar o nível de força do indivíduo e acompanhar sua evolução ao longo do treinamento ou de um processo de reabilitação. O dinamômetro manual avalia a força de preensão da mão, enquanto o dinamômetro de tronco avalia a força relacionada à musculatura do tronco. Na Terapia Ocupacional, essa avaliação ajuda a identificar limitações de força que possam interferir no desempenho das atividades de vida diária, atividades instrumentais, trabalho e lazer, além de auxiliar no planejamento das intervenções e na comparação da evolução do indivíduo ao longo do acompanhamento — ou seja, a dinamometria é uma ferramenta útil para obter dados quantitativos sobre a força muscular e apoiar a avaliação funcional.</p>
+
+<h3>Filmagens e fotos</h3>
+<div class="media">
+<figure><video class="vid" controls preload="metadata"><source src="video9.mp4" type="video/mp4"></video><figcaption>Teste de 1RM do supino reto, com auxílio dos colegas na barra.</figcaption></figure>
+<figure><video class="vid" controls preload="metadata"><source src="video10.mp4" type="video/mp4"></video><figcaption>Voador (peitoral) — exercício complementar feito na mesma aula.</figcaption></figure>
+<figure><img src="foto24.jpg" alt="Avaliação com dinamômetro manual, medindo a força de preensão" /><figcaption>Avaliação com dinamômetro manual (força de preensão).</figcaption></figure>
+<figure><img src="foto25.jpg" alt="Avaliação com dinamômetro de tronco" /><figcaption>Avaliação com dinamômetro de tronco.</figcaption></figure>
+<figure><img src="foto26.jpg" alt="Teste de 1RM no supino reto" /><figcaption>Teste de 1RM — supino reto.</figcaption></figure>
+<figure><img src="foto27.jpg" alt="Teste de 1RM na cadeira extensora" /><figcaption>Teste de 1RM — cadeira extensora.</figcaption></figure>
+</div>
+
+<h3>Reflexão</h3>
+<p>Espaço para o que você aprendeu: a diferença entre a forma clássica e a forma adaptada do teste de 1RM, por que a forma adaptada é mais segura para usar em contexto de avaliação (evita cargas máximas sem familiarização prévia), e como a dinamometria pode ser usada na Terapia Ocupacional para embasar objetivamente a avaliação de força e o acompanhamento funcional do paciente.</p>
+</section>
+<div class="divider"><i></i></div>
+<section id="conclusao">
+<h2>Conclusão do portfólio</h2>
+<p>Ao longo dessas seis aulas de Cinesiologia, passamos por avaliação articular (goniometria de punho, coluna, ombro, cotovelo e membros inferiores), pela aplicação desses conceitos numa situação funcional real (o caso do Carlos e a dificuldade de sentar e levantar) e pela avaliação e treinamento de força (exercícios na academia e teste de 1RM). Cada aula trouxe uma peça diferente: primeiro aprendemos a medir o movimento, depois a entender por que ele acontece e quais músculos participam, e por fim como treinar e mensurar força de forma segura.</p>
+<p>Para a Terapia Ocupacional, esse conteúdo é base pra praticamente tudo: sem entender goniometria, biomecânica e força muscular não dá pra avaliar direito uma limitação funcional, nem propor um treino ou uma adaptação que realmente funcione pro paciente. Cinesiologia não é só "teoria de academia" — é a ferramenta que vai me ajudar a olhar pra um movimento do dia a dia (sentar, levantar, pegar um objeto) e entender o que está acontecendo, articulação por articulação, músculo por músculo.</p>
+<p>Fechando esse portfólio, fica claro que essas seis aulas formam uma linha bem conectada: <b>avaliar → entender → intervir</b> — que é, no fundo, a lógica que vou levar comigo o curso todo como futuro terapeuta ocupacional.</p>
 </section>
 </main>
 
