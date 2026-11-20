@@ -48,7 +48,7 @@ export function collectDue(data: AppData, from: Date, to: Date): DueNotification
           key: `r:${r.id}:${at}`,
           at,
           title: r.title,
-          body: r.description || 'Lembrete do LIFE OS',
+          body: r.description || 'Lembrete do Ritmora',
           url: '#/lembretes',
           kind: 'reminder',
           refId: r.id,

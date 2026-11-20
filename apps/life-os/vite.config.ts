@@ -29,8 +29,8 @@ export default defineConfig({
       },
       manifest: {
         id: './',
-        name: 'LIFE OS',
-        short_name: 'LIFE OS',
+        name: 'Ritmora',
+        short_name: 'Ritmora',
         description: 'Seu sistema pessoal de organização: hábitos, metas, faculdade, agenda e lembretes.',
         lang: 'pt-BR',
         start_url: './',

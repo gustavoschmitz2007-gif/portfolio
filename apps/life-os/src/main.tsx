@@ -50,7 +50,7 @@ async function boot() {
       immediate: true,
       onNeedRefresh() {
         useUI.setState({ updateReady: () => update(true) });
-        toast('Nova versão do LIFE OS disponível', { duration: 0, action: { label: 'Atualizar', onClick: () => update(true) } });
+        toast('Nova versão do Ritmora disponível', { duration: 0, action: { label: 'Atualizar', onClick: () => update(true) } });
       },
     });
   }

@@ -1,4 +1,4 @@
-// iCalendar (.ics) export so the phone's own calendar can deliver alerts even with LIFE OS closed.
+// iCalendar (.ics) export so the phone's own calendar can deliver alerts even with Ritmora closed.
 import { addDays, addMinutesLocal, minutesOf, type DateKey, type TimeStr } from './date';
 import type { AcademicItem, AppData, CalendarEvent, Reminder, Repeat } from './types';
 
@@ -112,7 +112,7 @@ export interface IcsOptions {
 }
 
 export function buildIcs(data: AppData, opts: IcsOptions = { reminders: true, academic: true, events: true }, only?: { kind: 'reminder' | 'academic' | 'event'; id: string }): string {
-  const lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//LIFE OS//PT-BR', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH', 'X-WR-CALNAME:LIFE OS'];
+  const lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Ritmora//PT-BR', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH', 'X-WR-CALNAME:Ritmora'];
   const want = (kind: 'reminder' | 'academic' | 'event', id: string) => !only || (only.kind === kind && only.id === id);
   if (opts.reminders) for (const r of Object.values(data.reminders)) if (!r.done && want('reminder', r.id)) lines.push(...reminderVEvent(r));
   if (opts.academic) for (const a of Object.values(data.academic)) if (a.status !== 'concluido' && want('academic', a.id)) lines.push(...academicVEvent(a, data));

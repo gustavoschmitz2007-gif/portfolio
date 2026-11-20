@@ -80,7 +80,7 @@ export function Onboarding() {
             <div className="brand" style={{ padding: 0 }}>
               <BrandMark size={18} />
               <div className="brand-name">
-                LIFE <span>OS</span>
+                Ritmora
               </div>
             </div>
             <h1 className="onb-title">Seu centro pessoal de organização.</h1>

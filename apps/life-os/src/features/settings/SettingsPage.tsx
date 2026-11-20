@@ -22,7 +22,7 @@ export default function SettingsPage() {
       <div className="page-head">
         <div>
           <h1 className="page-title">Configurações</h1>
-          <p className="page-sub">Personalize o LIFE OS e cuide dos seus dados.</p>
+          <p className="page-sub">Personalize o Ritmora e cuide dos seus dados.</p>
         </div>
       </div>
       <div className="stack" style={{ '--gap': '16px' } as React.CSSProperties}>
@@ -255,15 +255,15 @@ function NotificationsSection() {
       <div className="notice" style={{ marginTop: 14 }}>
         <Info size={18} style={{ marginTop: 2, flexShrink: 0 }} />
         <div>
-          <strong>Como os avisos funcionam.</strong> O LIFE OS envia notificações reais do sistema enquanto o app está aberto ou em segundo plano (aba ou app recente).
-          {' '}Com o app <strong>totalmente fechado</strong>, navegadores não permitem agendar notificações locais sem um servidor de push: no Chrome/Android com o app instalado, o LIFE OS pede ao sistema verificações periódicas{bg === 'registered' ? ' (ativo neste aparelho)' : ''}, mas o intervalo é decidido pelo navegador. No iPhone, as notificações exigem o app instalado na tela inicial (iOS 16.4+).
+          <strong>Como os avisos funcionam.</strong> O Ritmora envia notificações reais do sistema enquanto o app está aberto ou em segundo plano (aba ou app recente).
+          {' '}Com o app <strong>totalmente fechado</strong>, navegadores não permitem agendar notificações locais sem um servidor de push: no Chrome/Android com o app instalado, o Ritmora pede ao sistema verificações periódicas{bg === 'registered' ? ' (ativo neste aparelho)' : ''}, mas o intervalo é decidido pelo navegador. No iPhone, as notificações exigem o app instalado na tela inicial (iOS 16.4+).
           {' '}Ao abrir o app, tudo o que venceu aparece destacado. <strong>Para garantia total</strong>, exporte prazos e lembretes para o calendário do celular — ele avisa mesmo com tudo fechado.
           <div className="faint" style={{ marginTop: 6, fontSize: 12 }}>
             Service worker: {swOk ? 'ativo' : 'indisponível'} · Verificação em segundo plano: {bg === 'registered' ? 'registrada' : bg === 'denied' ? 'não permitida pelo navegador' : 'não suportada neste navegador'}
           </div>
         </div>
       </div>
-      <button className="btn btn-outline btn-sm" style={{ marginTop: 12 }} onClick={() => downloadIcs(getData(), 'lifeos-agenda')}>
+      <button className="btn btn-outline btn-sm" style={{ marginTop: 12 }} onClick={() => downloadIcs(getData(), 'ritmora-agenda')}>
         <CalendarPlus size={15} /> Exportar agenda para o calendário (.ics)
       </button>
     </section>
@@ -289,7 +289,7 @@ function InstallSection() {
             if (r.outcome === 'accepted') useUI.setState({ installPrompt: null });
           }}
         >
-          <Download size={15} /> Instalar LIFE OS
+          <Download size={15} /> Instalar Ritmora
         </button>
       ) : isIOS() ? (
         <p className="muted" style={{ fontSize: 13.5, lineHeight: 1.55 }}>
@@ -471,7 +471,7 @@ function AboutSection() {
     <section className="card">
       <SectionHead icon={<Info size={16} />} title="Sobre" />
       <p className="muted" style={{ fontSize: 13.5, lineHeight: 1.6 }}>
-        LIFE OS {__APP_VERSION__} · esquema de dados v{getData().schemaVersion}. Funciona offline. Nenhum dado sai do seu aparelho.
+        Ritmora {__APP_VERSION__} · esquema de dados v{getData().schemaVersion}. Funciona offline. Nenhum dado sai do seu aparelho.
       </p>
     </section>
   );

@@ -36,7 +36,7 @@ export function NotificationNotice({ dismissible, compact }: { dismissible?: boo
         <div style={{ flex: 1 }}>
           {isIOS() ? (
             <>
-              <strong>No iPhone, as notificações exigem o app instalado.</strong> Toque em Compartilhar → “Adicionar à Tela de Início”, abra o LIFE OS por lá e ative os avisos (iOS 16.4 ou superior).
+              <strong>No iPhone, as notificações exigem o app instalado.</strong> Toque em Compartilhar → “Adicionar à Tela de Início”, abra o Ritmora por lá e ative os avisos (iOS 16.4 ou superior).
             </>
           ) : (
             <>
