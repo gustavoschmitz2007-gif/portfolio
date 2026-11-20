@@ -77,7 +77,7 @@ export function Shell({ children }: { children: ReactNode }) {
         <div className="brand">
           <BrandMark />
           <div className="brand-name">
-            LIFE <span>OS</span>
+            Ritmora
           </div>
         </div>
         <button className="btn btn-accent btn-block sidebar-quick" onClick={() => openSheet({ kind: 'quick' })}>
@@ -112,7 +112,7 @@ export function Shell({ children }: { children: ReactNode }) {
         <div className="topbar">
           <a className="topbar-brand" href="#/">
             <BrandMark size={15} />
-            <span className="topbar-title">LIFE OS</span>
+            <span className="topbar-title">Ritmora</span>
           </a>
           <button className={cx('icon-btn', path === '/lembretes' && 'icon-btn-filled')} aria-label="Lembretes" onClick={() => navigate('/lembretes')} style={{ position: 'relative' }}>
             <Bell size={20} />

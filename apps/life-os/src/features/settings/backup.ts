@@ -36,7 +36,7 @@ function saveBlob(blob: Blob, filename: string) {
 
 export function backupFile(data: AppData): { blob: Blob; name: string } {
   const payload: BackupFile = { app: BACKUP_APP, kind: 'backup', exportedAt: new Date().toISOString(), schemaVersion: data.schemaVersion, data };
-  return { blob: new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' }), name: `lifeos-backup-${todayKey()}.json` };
+  return { blob: new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' }), name: `ritmora-backup-${todayKey()}.json` };
 }
 
 export function downloadBackup(data: AppData) {
@@ -51,7 +51,7 @@ export async function shareBackup(data: AppData): Promise<boolean> {
   const nav = navigator as Navigator & { canShare?: (d: ShareData) => boolean };
   if (nav.canShare?.({ files: [file] })) {
     try {
-      await navigator.share({ files: [file], title: 'Backup LIFE OS' });
+      await navigator.share({ files: [file], title: 'Backup Ritmora' });
       return true;
     } catch (e) {
       if ((e as Error).name === 'AbortError') return true;
@@ -81,7 +81,7 @@ export async function parseBackup(file: File): Promise<AppData> {
   }
   const obj = json as Partial<BackupFile> & Record<string, unknown>;
   const raw = obj && obj.app === BACKUP_APP && obj.data ? obj.data : obj;
-  if (!raw || typeof raw !== 'object' || !('settings' in raw || 'habits' in raw)) throw new Error('Este arquivo não parece ser um backup do LIFE OS.');
+  if (!raw || typeof raw !== 'object' || !('settings' in raw || 'habits' in raw)) throw new Error('Este arquivo não parece ser um backup do Ritmora.');
   return normalizeData(raw);
 }
 

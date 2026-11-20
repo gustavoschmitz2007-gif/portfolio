@@ -148,7 +148,7 @@ export default function AcademicPage() {
                 <Empty
                   icon={<GraduationCap size={24} />}
                   title="Nada cadastrado ainda"
-                  text="Cadastre trabalhos, provas, apresentações e relatórios com data de entrega. O LIFE OS avisa quando o prazo estiver chegando."
+                  text="Cadastre trabalhos, provas, apresentações e relatórios com data de entrega. O Ritmora avisa quando o prazo estiver chegando."
                   action={
                     <div className="row wrap" style={{ justifyContent: 'center' }}>
                       <button className="btn btn-outline" onClick={() => openSheet({ kind: 'subject' })}>

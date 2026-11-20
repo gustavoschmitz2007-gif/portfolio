@@ -1,4 +1,4 @@
-# LIFE OS
+# Ritmora
 
 Sistema pessoal de organização: hábitos, metas semanais, faculdade, agenda, planejamento do dia, lembretes e estatísticas — em um app web instalável (PWA) que funciona offline.
 
@@ -30,14 +30,14 @@ Sistema pessoal de organização: hábitos, metas semanais, faculdade, agenda, p
 
 - Tudo é salvo automaticamente no **IndexedDB** do navegador (com fallback para `localStorage`). A gravação é imediata e, ao fechar a página, uma cópia síncrona de emergência garante que a última alteração não se perca.
 - **Backups automáticos:** um por dia, mantendo os 10 mais recentes, restauráveis em *Configurações*. Antes de importar, restaurar ou apagar, uma cópia de segurança é criada.
-- **Exportar/Importar:** arquivo JSON (`lifeos-backup-AAAA-MM-DD.json`) — serve para trocar de aparelho.
+- **Exportar/Importar:** arquivo JSON (`ritmora-backup-AAAA-MM-DD.json`) — serve para trocar de aparelho.
 - O app pede ao navegador **armazenamento persistente** (protege contra limpeza automática).
 - Estrutura pronta para sincronização futura: cada registro tem `id`, `createdAt`, `updatedAt`; exclusões ficam em `tombstones`; o documento tem `schemaVersion` e passa por `normalizeData()` (migrações e validação).
 
 ## Notificações — o que funciona e as limitações
 
 - **App aberto ou em segundo plano:** notificações reais do sistema no horário (lembretes, prazos da faculdade, hábitos com horário, compromissos e tarefas com horário), via service worker. Com o app em foco, aparece um aviso dentro do app com *Concluir* / *Adiar*.
-- **App totalmente fechado:** navegadores não permitem agendar notificações locais sem um servidor de push. No Chrome/Android com o app instalado, o LIFE OS registra uma verificação periódica em segundo plano (*Periodic Background Sync*), mas o intervalo é decidido pelo navegador — é um reforço, não uma garantia.
+- **App totalmente fechado:** navegadores não permitem agendar notificações locais sem um servidor de push. No Chrome/Android com o app instalado, o Ritmora registra uma verificação periódica em segundo plano (*Periodic Background Sync*), mas o intervalo é decidido pelo navegador — é um reforço, não uma garantia.
 - **iPhone:** notificações só com o app instalado na tela inicial (iOS 16.4+).
 - **Alternativa garantida:** *Configurações → Exportar agenda para o calendário (.ics)* (ou o ícone de calendário em cada lembrete/atividade/compromisso). O calendário do celular avisa mesmo com tudo fechado.
 - Ao abrir o app, tudo o que venceu aparece destacado (lembretes pendentes, tarefas e entregas atrasadas).

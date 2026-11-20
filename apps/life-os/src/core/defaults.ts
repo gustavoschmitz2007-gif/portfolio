@@ -294,7 +294,7 @@ export class InvalidDataError extends Error {}
 export function normalizeData(raw: unknown): AppData {
   if (!isObj(raw)) throw new InvalidDataError('Formato de dados inválido.');
   const version = num(raw.schemaVersion, 1);
-  if (version > SCHEMA_VERSION) throw new InvalidDataError('Este backup foi criado por uma versão mais nova do LIFE OS.');
+  if (version > SCHEMA_VERSION) throw new InvalidDataError('Este backup foi criado por uma versão mais nova do Ritmora.');
 
   const habits = normalizeCollection(raw.habits, (o) => normalizeHabit(o));
   const logs: Record<string, HabitLog> = {};

@@ -1,5 +1,5 @@
 // In-app notification scheduler. Real system notifications are shown through the
-// service worker (required on Android) while LIFE OS is open or in the background.
+// service worker (required on Android) while Ritmora is open or in the background.
 import { collectDue, nextDueTime, type DueNotification } from '../core/due';
 import { getMeta, markNotified, pruneNotified, setMeta, wasNotified } from '../core/db';
 import { actions, getData, useApp } from '../store/store';
@@ -69,7 +69,7 @@ export async function showSystemNotification(n: Pick<DueNotification, 'title' | 
 export async function sendTestNotification(): Promise<boolean> {
   return showSystemNotification({
     key: 'test-' + Date.now(),
-    title: 'LIFE OS',
+    title: 'Ritmora',
     body: 'Notificações funcionando. Você será avisado dos seus lembretes e prazos.',
     url: '#/',
     kind: 'reminder',

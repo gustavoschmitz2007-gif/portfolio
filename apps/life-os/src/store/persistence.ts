@@ -75,7 +75,7 @@ export async function hydrate(): Promise<void> {
       // Never overwrite data we couldn't read: park it and start fresh.
       await setMeta('unreadable-backup', raw);
       data = emptyData();
-      console.error('LIFE OS: stored data could not be read', e instanceof InvalidDataError ? e.message : e);
+      console.error('Ritmora: stored data could not be read', e instanceof InvalidDataError ? e.message : e);
     }
   } else data = emptyData();
 
