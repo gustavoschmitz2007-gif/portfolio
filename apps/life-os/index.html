@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>LIFE OS</title>
+    <meta name="description" content="Seu sistema pessoal de organização: hábitos, metas semanais, faculdade, agenda e lembretes." />
+    <meta name="theme-color" content="#0a0b0d" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="LIFE OS" />
+    <link rel="icon" href="icons/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+    <script>
+      // Apply the last theme before first paint (avoids a flash).
+      (function () {
+        var t = 'dark', a = 'lime';
+        try {
+          var s = JSON.parse(localStorage.getItem('lifeos:theme') || 'null');
+          if (s) { t = s.theme || t; a = s.accent || a; }
+        } catch (e) {}
+        document.documentElement.dataset.theme = t;
+        document.documentElement.dataset.accent = a;
+      })();
+    </script>
+    <style>
+      html, body { margin: 0; background: #0a0b0d; }
+      html[data-theme='light'], html[data-theme='light'] body { background: #f3f3ef; }
+      #splash { position: fixed; inset: 0; display: grid; place-items: center; }
+      #splash i { width: 44px; height: 44px; border-radius: 13px; background: #c5f26b; display: block; animation: p 1.2s ease-in-out infinite; }
+      @keyframes p { 50% { transform: scale(0.86); opacity: 0.7; } }
+    </style>
+  </head>
+  <body>
+    <div id="splash" aria-hidden="true"><i></i></div>
+    <div id="root"></div>
+    <noscript>O LIFE OS precisa de JavaScript para funcionar.</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

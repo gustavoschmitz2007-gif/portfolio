@@ -1,0 +1,140 @@
+:root {
+  --font-sans: 'Inter Variable', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Manrope Variable', 'Inter Variable', system-ui, -apple-system, sans-serif;
+
+  --r-xs: 8px;
+  --r-sm: 12px;
+  --r-md: 16px;
+  --r-lg: 20px;
+  --r-xl: 26px;
+  --r-full: 999px;
+
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur: 180ms;
+
+  --sidebar-w: 252px;
+  --tabbar-h: 68px;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --gutter: 16px;
+  color-scheme: dark;
+}
+
+/* ---------- Dark (default) ---------- */
+:root,
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #0a0b0d;
+  --bg-2: #0e1013;
+  --surface: #14161a;
+  --surface-2: #1a1d22;
+  --surface-3: #23272e;
+  --surface-hover: #1e2127;
+  --border: rgba(255, 255, 255, 0.07);
+  --border-2: rgba(255, 255, 255, 0.11);
+  --border-3: rgba(255, 255, 255, 0.18);
+  --text: #f2f3f5;
+  --text-2: #a8adb7;
+  --text-3: #6f7581;
+  --text-inverse: #0a0b0d;
+  --overlay: rgba(4, 5, 7, 0.66);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.7), 0 2px 6px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 24px 60px -16px rgba(0, 0, 0, 0.8), 0 4px 16px rgba(0, 0, 0, 0.4);
+  --card-gloss: linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0) 40%);
+
+  --danger: #ff6b6b;
+  --warning: #f5b544;
+  --success: #4ade80;
+  --info: #7ab4ff;
+
+  --c-blue: #3987e5;
+  --c-orange: #e56a33;
+  --c-aqua: #1fae7d;
+  --c-yellow: #d4930a;
+  --c-magenta: #d55181;
+  --c-green: #22a83a;
+  --c-violet: #9085e9;
+  --c-red: #e66767;
+  --c-slate: #94a3b8;
+
+  --grid: rgba(255, 255, 255, 0.06);
+  --track: rgba(255, 255, 255, 0.07);
+}
+
+/* ---------- Light ---------- */
+:root[data-theme='light'] {
+  color-scheme: light;
+  --bg: #f3f3ef;
+  --bg-2: #ececE7;
+  --surface: #ffffff;
+  --surface-2: #f7f7f3;
+  --surface-3: #ededE8;
+  --surface-hover: #f5f5f1;
+  --border: rgba(16, 18, 22, 0.08);
+  --border-2: rgba(16, 18, 22, 0.12);
+  --border-3: rgba(16, 18, 22, 0.2);
+  --text: #101216;
+  --text-2: #50555f;
+  --text-3: #868b95;
+  --text-inverse: #ffffff;
+  --overlay: rgba(20, 22, 26, 0.36);
+  --shadow-sm: 0 1px 2px rgba(16, 18, 22, 0.06);
+  --shadow: 0 10px 30px -14px rgba(16, 18, 22, 0.18), 0 2px 6px rgba(16, 18, 22, 0.05);
+  --shadow-lg: 0 24px 60px -20px rgba(16, 18, 22, 0.28), 0 4px 16px rgba(16, 18, 22, 0.08);
+  --card-gloss: none;
+
+  --danger: #d23636;
+  --warning: #b26b00;
+  --success: #15803d;
+  --info: #2a78d6;
+
+  --c-blue: #2a78d6;
+  --c-orange: #eb6834;
+  --c-aqua: #1baf7a;
+  --c-yellow: #e09a00;
+  --c-magenta: #e0679a;
+  --c-green: #1f9a1f;
+  --c-violet: #6250d6;
+  --c-red: #e34948;
+  --c-slate: #64748b;
+
+  --grid: rgba(16, 18, 22, 0.07);
+  --track: rgba(16, 18, 22, 0.07);
+}
+
+/* ---------- Accents ---------- */
+:root[data-theme='dark'][data-accent='lime'],
+:root[data-accent='lime'] { --accent: #c5f26b; --on-accent: #12170a; --accent-ink: #c5f26b; }
+:root[data-theme='dark'][data-accent='violet'] { --accent: #a99bff; --on-accent: #130f2a; --accent-ink: #b7acff; }
+:root[data-theme='dark'][data-accent='blue'] { --accent: #7ab4ff; --on-accent: #06121f; --accent-ink: #8dbfff; }
+:root[data-theme='dark'][data-accent='aqua'] { --accent: #5ee0b5; --on-accent: #04170f; --accent-ink: #6fe6be; }
+:root[data-theme='dark'][data-accent='orange'] { --accent: #ffa06b; --on-accent: #210c02; --accent-ink: #ffab7d; }
+
+:root[data-theme='light'][data-accent='lime'] { --accent: #a3d93b; --on-accent: #141c05; --accent-ink: #4a6c0e; }
+:root[data-theme='light'][data-accent='violet'] { --accent: #6250d6; --on-accent: #ffffff; --accent-ink: #5141c2; }
+:root[data-theme='light'][data-accent='blue'] { --accent: #2a78d6; --on-accent: #ffffff; --accent-ink: #1f63b5; }
+:root[data-theme='light'][data-accent='aqua'] { --accent: #12936a; --on-accent: #ffffff; --accent-ink: #0d7655; }
+:root[data-theme='light'][data-accent='orange'] { --accent: #e3612c; --on-accent: #ffffff; --accent-ink: #b84a1a; }
+
+:root {
+  --accent-soft: color-mix(in srgb, var(--accent) 14%, transparent);
+  --accent-line: color-mix(in srgb, var(--accent) 40%, transparent);
+  --danger-soft: color-mix(in srgb, var(--danger) 14%, transparent);
+  --warning-soft: color-mix(in srgb, var(--warning) 16%, transparent);
+  --success-soft: color-mix(in srgb, var(--success) 14%, transparent);
+  --info-soft: color-mix(in srgb, var(--info) 14%, transparent);
+}
+
+/* Color helpers: set --hue on an element with .hue-<key> */
+.hue-blue { --hue: var(--c-blue); }
+.hue-orange { --hue: var(--c-orange); }
+.hue-aqua { --hue: var(--c-aqua); }
+.hue-yellow { --hue: var(--c-yellow); }
+.hue-magenta { --hue: var(--c-magenta); }
+.hue-green { --hue: var(--c-green); }
+.hue-violet { --hue: var(--c-violet); }
+.hue-red { --hue: var(--c-red); }
+.hue-slate { --hue: var(--c-slate); }
+.hue-accent { --hue: var(--accent); }
