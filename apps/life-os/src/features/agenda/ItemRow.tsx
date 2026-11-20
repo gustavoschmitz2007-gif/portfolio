@@ -1,4 +1,4 @@
-import { AlarmClock, Bell, CalendarDays, Check, GraduationCap, Repeat } from 'lucide-react';
+import { AlarmClock, Bell, CalendarDays, Check, GraduationCap, ListTodo, Repeat } from 'lucide-react';
 import type { AgendaItem } from '../../core/agenda';
 import { actions, getData } from '../../store/store';
 import { openSheet, toastUndo } from '../../store/ui';
@@ -36,7 +36,7 @@ const KIND_ICON = {
   event: CalendarDays,
   reminder: Bell,
   academic: GraduationCap,
-  task: Check,
+  task: ListTodo,
 };
 
 export function AgendaRow({ item: it, showDate, overdueLabel }: { item: AgendaItem; showDate?: string; overdueLabel?: string }) {
